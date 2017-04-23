@@ -1,15 +1,5 @@
 import bmpLib from './libs/bmp_lib'
 
-function strRepeat(str, qty) {
-    if (qty < 1) return '';
-    var result = '';
-    while (qty > 0) {
-        if (qty & 1) result += str;
-        qty >>= 1, str += str;
-    }
-    return result;
-};
-
 let gcd = (a, b) => {
     if (!b) {
         return a;
@@ -17,19 +7,12 @@ let gcd = (a, b) => {
     return gcd(b, a % b);
 };
 
-let generateImageSource = (width, height) => {
-    let row = strRepeat('\x00', width);
-    let grid = [];
-    for (let i = 0; i < height; i++)
-        grid.push(row);
-    return bmpLib.imageSource(grid, [[0, 0, 0]]);
-};
 
 let getBase64Image = (width, height) => {
     let _gcd = gcd(width, height);
     width /= _gcd;
     height /= _gcd;
-    return generateImageSource(width, height);
+    return bmpLib.imageSource(width, height);
 };
 
 let _create = (element, imageSrc, aspectWidth, aspectHeight,

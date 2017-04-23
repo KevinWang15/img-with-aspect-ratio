@@ -16,7 +16,7 @@ It generates an image with certain aspect ratio in memory, uses the image to mak
 * Customizable crop options (crop/contain/position).
 * Supports all css units, 200px or 100%.
 * Reasonably good performance.
-* Only 3kb gzipped.
+* Only 1.8kb gzipped.
 
 # Installation
 Download [dist/img-with-aspect-ratio.min.js](https://raw.githubusercontent.com/KevinWang15/img-with-aspect-ratio/master/dist/img-with-aspect-ratio.min.js) and include it in the HTML.
