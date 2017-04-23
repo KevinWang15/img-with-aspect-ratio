@@ -10,7 +10,7 @@ An unconventional but great JavaScript solution for "image resize and keep aspec
 It generates an image with certain aspect ratio in memory, uses the image to make the browser calculate the width/height of the element and recalculate & apply them automatically when resized (keeping the aspect ratio).
 
 # Advantages
-* Once set up, no JavaScript is needed any more.
+* Once set up, no JavaScript is needed any more, doesn't rely on JS watchers or callbacks.
 * No obscure css, plays well with other css (e.g. max-width/min-width/media query).
 * Good compatibility across browsers, supports IE8.
 * Customizable crop options (crop/contain/position).
@@ -78,3 +78,5 @@ Remember, ```aspectWidth```=10000,```aspectHeight```=6000 is ```4,000,000 times`
 - [ ] Angular 2 component. 
 - [ ] React component. 
 
+# See also
+[Experimental project: div-fixed-aspect-ratio](https://github.com/KevinWang15/div-fixed-aspect-ratio)
