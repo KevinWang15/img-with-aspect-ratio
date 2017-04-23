@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <script src="img-with-aspect-ratio.min.js"></script>
+    <style>
+
+        body {
+            text-align: center;
+            margin: 16px 0 0 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+        }
+
+        p {
+            margin: 10px;
+            color: red;
+        }
+
+        .demo-item {
+            padding: 30px 0;
+            border: 1px solid black;
+            margin-bottom: -1px;
+        }
+
+        [id^=myImg] {
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+<a href="https://github.com/KevinWang15/img-with-aspect-ratio" target="_blank">
+    https://github.com/KevinWang15/img-with-aspect-ratio
+</a>
+<p>
+    View source to see the code of this demo!
+</p>
+<div class="demo-item">
+    <h1>1. Width 30%, aspect ratio 3:2</h1>
+    <div id="myImg1"></div>
+    <script>
+        window.ImgWithAspectRatio.create(
+            window.document.getElementById('myImg1'),
+            'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png',
+            3, 2, 'width', '30%'
+        );
+    </script>
+    <p>
+        Use dev tools to tweak the width of #myImg1 !
+    </p>
+</div>
+
+<div class="demo-item">
+    <h1>2. Height 100px, aspect ratio 5:1, set width accordingly, crop image.</h1>
+    <div id="myImg2"></div>
+    <script>
+        window.ImgWithAspectRatio.create(
+            window.document.getElementById('myImg2'),
+            'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png',
+            5, 1, 'height', '100px', { size: "cover" }
+        );
+    </script>
+    <p>
+        Use dev tools to tweak the height of #myImg2 !
+    </p>
+</div>
+
+
+<div class="demo-item">
+    <h1>3. Override width with css.</h1>
+    <div id="myImg3"></div>
+    <script>
+        window.ImgWithAspectRatio.create(
+            window.document.getElementById('myImg3'),
+            'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png',
+            5, 1, 'width', '100px' /* set this attribute to empty string if you do not wish to use !important */,
+            { size: "cover" }
+        );
+    </script>
+    <style>
+        #myImg3 {
+            width: 300px !important;
+        }
+    </style>
+    <p>
+        See the source code!
+    </p>
+</div>
+
+
+<div class="demo-item">
+    <h1>4. Override width with JavaScript.</h1>
+    <div id="myImg4"></div>
+    <script>
+        window.ImgWithAspectRatio.create(
+            window.document.getElementById('myImg4'),
+            'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png',
+            5, 1, 'width', '100px', { size: "cover" }
+        );
+        window.document.getElementById('myImg4').style.width = '200px';
+    </script>
+    <p>
+        See the source code!
+    </p>
+</div>
+
+<div class="demo-item">
+    <h1>5. Combining it with max/min-width</h1>
+    <div>
+        <div id="myImg5"></div>
+    </div>
+
+    <script>
+        window.ImgWithAspectRatio.create(
+            window.document.getElementById('myImg5'),
+            'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png',
+            5, 1, 'width', '100%', { size: "cover" }
+        );
+    </script>
+    <style>
+        #myImg5 {
+            max-width: 500px;
+            min-width: 300px;
+        }
+    </style>
+    <p>
+        Squelch me!
+    </p>
+</div>
+
+<div class="demo-item">
+    <h1>6. Let's get responsive!</h1>
+    <div>
+        <div id="myImg6"></div>
+    </div>
+    <script>
+        window.ImgWithAspectRatio.create(
+            window.document.getElementById('myImg6'),
+            'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png',
+            5, 1, 'width', '', { size: "cover" }
+        );
+    </script>
+    <style>
+        #myImg6 {
+            width: 700px;
+        }
+
+        @media (max-width: 900px) {
+            #myImg6 {
+                width: 500px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            #myImg6 {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #myImg6 {
+                width: 100px;
+            }
+        }
+    </style>
+    <p>
+        Resize the window!
+    </p>
+</div>
+
+
+</body>
+
+</html>

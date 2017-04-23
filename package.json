@@ -1,0 +1,22 @@
+{
+  "name": "img-with-aspect-ratio",
+  "version": "0.0.1",
+  "description": "An unconventional but great JavaScript solution for \"image resize and keep aspect ratio\".",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinWang15/img-with-aspect-ratio.git"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.4.1"
+  },
+  "license": "MIT"
+}
