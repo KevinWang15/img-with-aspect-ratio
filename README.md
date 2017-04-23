@@ -4,7 +4,7 @@ img-with-aspect-ratio
 An unconventional but great JavaScript solution for "image resize and keep aspect ratio".
 
 # Demo
-
+[Check out the demo!](https://cdn.rawgit.com/KevinWang15/img-with-aspect-ratio/000576ed/dist/demo.html)
 
 # How it works
 It generates an image with certain aspect ratio in memory, uses the image to make the browser calculate the width/height of the element and recalculate & apply them automatically when resized (keeping the aspect ratio).
@@ -19,7 +19,7 @@ It generates an image with certain aspect ratio in memory, uses the image to mak
 * Only 3kb gzipped.
 
 # Installation
-Download ```dist/img-with-aspect-ratio.min.js``` and include it in the HTML.
+Download [dist/img-with-aspect-ratio.min.js](https://raw.githubusercontent.com/KevinWang15/img-with-aspect-ratio/master/dist/img-with-aspect-ratio.min.js) and include it in the HTML.
 
 # API
 ```javascript
